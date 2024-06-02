@@ -1,0 +1,124 @@
+@font-face {
+    font-family: Figtree;
+    src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Figtree;
+    src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+    font-style: italic;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(47, 88%, 63%);
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card {
+    background: hsl(0, 0%, 100%);
+    font-family: Figtree;
+    max-width: 384px;
+    border: 1px solid hsl(0, 0%, 7%);
+    padding: 24px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-shadow: hsl(0, 0%, 7%) 8px 8px;
+    line-height: 150%;
+
+
+    .card__image {
+        border-radius: 10px;
+    }
+
+    .card__contents {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .card__tag {
+        padding: 4px 12px;
+        background: hsl(47, 88%, 63%);
+        font-size: 14px;
+        font-weight: bolder;
+        width: fit-content;
+        border-radius: 4px;
+    }
+
+    .card__published {
+        font-size: 14px;
+    }
+
+    .card__title {
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .card__description {
+        font-size: 16px;
+        color: hsl(0, 0%, 50%);
+    }
+
+    .author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .author__profile-image{
+            width: 32px;
+            height: 32px;
+        }
+
+        .author__name {
+            font-size: 14px;
+            font-weight: bolder;
+        }
+    }
+}
+
+@media (hover: hover) {
+    .card:hover {
+        box-shadow: hsl(0, 0%, 7%) 16px 16px;
+    }
+    
+    .card__title:hover {
+        color: hsl(47, 88%, 63%);
+    }
+  }
+
+@media only screen and (max-width: 430px) {
+    .card {
+        max-width: 327px;
+
+        .card__tag {
+            font-size: 12px;
+        }
+    
+        .card__published {
+            font-size: 12px;
+        }
+    
+        .card__title {
+            font-size: 20px;
+        }
+    
+        .card__description {
+            font-size: 14px;
+        }
+    }
+}
